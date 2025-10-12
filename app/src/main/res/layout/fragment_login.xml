@@ -147,8 +147,97 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/carmine_pink"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Or login with"
+                android:textColor="@color/police_blue"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="end"
+                android:background="@color/carmine_pink"/>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:id="@+id/facebook_icon"
+                android:layout_width="104dp"
+                android:layout_height="70dp"
+                android:background="@drawable/sh_bg_btn_dust_storm"
+                android:contentDescription="@string/content_description"
+
+                android:padding="18dp"
+                android:src="@drawable/ic_facebook">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/google_plus_icon"
+                android:layout_width="104dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="125dp"
+                android:background="@drawable/sh_bg_btn_dust_storm"
+                android:contentDescription="@string/content_description"
+
+                android:padding="3dp"
+                android:src="@drawable/ic_google_plus">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/apple_icon"
+                android:layout_width="104dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="250dp"
+                android:background="@drawable/sh_bg_btn_dust_storm"
+                android:contentDescription="@string/content_description"
+
+                android:padding="18dp"
+                android:src="@drawable/ic_apple">
+            </ImageView>
+
+
+        </FrameLayout>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/police_blue"
+        android:textStyle="bold"/>
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Now"
+        android:layout_gravity="bottom|center"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/carmine_pink"
+        android:textStyle="bold"/>
 </FrameLayout>

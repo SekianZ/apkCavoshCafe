@@ -11,6 +11,7 @@
     <string name="ingresar">Ingresar</string>
     <string name="correo">Correo</string>
     <string name="passwordd">Contraseña</string>
-    <string name="olvidar_contrasena">¿ Olvidastes tu contraseña?</string>
+    <string name="olvidar_contrasena">¿ Olvidaste tu contraseña?</string>
+    <string name="content_description">content_description</string>
 
 </resources>
