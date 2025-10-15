@@ -34,12 +34,15 @@
         <action
             android:id="@+id/action_navigation_registrar_to_navigation_verificar"
             app:destination="@id/navigation_verificar" />
+        <action
+            android:id="@+id/action_navigation_registrar_to_navigation_olvidaste2"
+            app:destination="@id/navigation_olvidaste" />
     </fragment>
     <fragment
         android:id="@+id/navigation_verificar"
-        android:name="pe.edu.senati.apkcavoshcafes101.ui.Verificar"
+        android:name="pe.edu.senati.apkcavoshcafes101.ui.Validar"
         android:label="fragment_verificar"
-        tools:layout="@layout/fragment_verificar" />
+        tools:layout="@layout/fragment_validar" />
     <fragment
         android:id="@+id/navigation_inicio"
         android:name="pe.edu.senati.apkcavoshcafes101.ui.Inicio"
@@ -96,4 +99,18 @@
         android:name="pe.edu.senati.apkcavoshcafes101.ui.MenuProductoPersonalizar"
         android:label="fragment_menu_producto_personalizar"
         tools:layout="@layout/fragment_menu_producto_personalizar" />
+    <fragment
+        android:id="@+id/navigation_passwordd"
+        android:name="pe.edu.senati.apkcavoshcafes101.ui.Passwordd"
+        android:label="fragment_passwordd"
+        tools:layout="@layout/fragment_passwordd" />
+    <fragment
+        android:id="@+id/navigation_olvidaste"
+        android:name="pe.edu.senati.apkcavoshcafes101.ui.Olvidaste"
+        android:label="fragment_olvidaste"
+        tools:layout="@layout/fragment_olvidaste" >
+        <action
+            android:id="@+id/action_navigation_olvidaste_to_navigation_passwordd"
+            app:destination="@id/navigation_passwordd" />
+    </fragment>
 </navigation>

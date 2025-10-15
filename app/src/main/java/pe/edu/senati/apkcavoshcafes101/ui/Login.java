@@ -12,6 +12,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import pe.edu.senati.apkcavoshcafes101.R;
 import pe.edu.senati.apkcavoshcafes101.databinding.FragmentLoginBinding;
@@ -39,6 +40,15 @@ public class Login extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
-        navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController( view );
+
+        binding.btnIngresar.setOnClickListener(v -> navController.navigate(R.id.navigation_olvidaste));
+        binding.tvRegistrar.setOnClickListener(v->navController.navigate(R.id.navigation_registrar));
+        binding.btnIngresar.setOnClickListener(v -> navController.navigate(R.id.navigation_registrar));
+        binding.btnLogin.setOnClickListener(v->btnLogin_Click());
+    }
+
+    void  btnLogin_Click(){
+
     }
 }

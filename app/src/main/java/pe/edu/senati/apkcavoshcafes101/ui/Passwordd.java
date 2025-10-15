@@ -14,11 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import pe.edu.senati.apkcavoshcafes101.R;
-import pe.edu.senati.apkcavoshcafes101.databinding.FragmentRegistrarBinding;
+import pe.edu.senati.apkcavoshcafes101.databinding.FragmentPassworddBinding;
 
 
-public class Registrar extends Fragment {
-    FragmentRegistrarBinding binding;
+public class Passwordd extends Fragment {
+    FragmentPassworddBinding binding;
     Context context;
     View view;
     NavController navController;
@@ -31,7 +31,7 @@ public class Registrar extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
-        binding = FragmentRegistrarBinding.inflate(inflater,container, false);
+        binding = FragmentPassworddBinding.inflate(inflater,container, false);
         return view = binding.getRoot();
     }
 
@@ -39,20 +39,21 @@ public class Registrar extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
-        navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController( view );
 
-        binding.btnGuardar.setOnClickListener(v->btnGuardar_Click());
+        binding.tvLogin.setOnClickListener(v-> navController.navigate(R.id.navigation_login));
+        binding.btnActualizar.setOnClickListener(v -> btnActualizar_Click());
     }
 
-    private void btnGuardar_Click(){
-        String sCorreo = binding.tilRegEmail.getEditText().getText().toString().trim();
+    private void btnActualizar_Click(){
+        String sCorreo = getArguments().getString("correo");
 
-        //Api
+        String sPasswordd = binding.tilPasswordd.getEditText().getText().toString().trim();
+        String sPassworddConfirmar = binding.tilPassworddConfirmar.getEditText().getText().toString().trim();
 
-        Bundle bundle = new Bundle();
-        bundle.putString("validar","registrar");
-        bundle.putString("correo", sCorreo);
-        navController.navigate(R.id.navigation_verificar, bundle);
+        // api -> actualizar passwordd para el correo
+        // mensaje "Actualizacion exitosa"
 
+        navController.navigate(R.id.navigation_login);
     }
 }

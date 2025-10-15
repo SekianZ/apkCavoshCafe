@@ -13,12 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import pe.edu.senati.apkcavoshcafes101.R;
-import pe.edu.senati.apkcavoshcafes101.databinding.FragmentRegistrarBinding;
+import pe.edu.senati.apkcavoshcafes101.databinding.FragmentValidarBinding;
 
 
-public class Registrar extends Fragment {
-    FragmentRegistrarBinding binding;
+public class Validar extends Fragment {
+    FragmentValidarBinding binding;
     Context context;
     View view;
     NavController navController;
@@ -31,7 +30,7 @@ public class Registrar extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
-        binding = FragmentRegistrarBinding.inflate(inflater,container, false);
+        binding = FragmentValidarBinding.inflate(inflater,container, false);
         return view = binding.getRoot();
     }
 
@@ -41,18 +40,10 @@ public class Registrar extends Fragment {
         context = getContext();
         navController = Navigation.findNavController(view);
 
-        binding.btnGuardar.setOnClickListener(v->btnGuardar_Click());
+        binding.btnValidar.setOnClickListener(v->btnVerificar_Click());
     }
 
-    private void btnGuardar_Click(){
-        String sCorreo = binding.tilRegEmail.getEditText().getText().toString().trim();
-
-        //Api
-
-        Bundle bundle = new Bundle();
-        bundle.putString("validar","registrar");
-        bundle.putString("correo", sCorreo);
-        navController.navigate(R.id.navigation_verificar, bundle);
-
+    private void btnVerificar_Click(){
+        String sCodigo = binding.tilCodigo.getEditText().getText().toString().trim();
     }
 }
