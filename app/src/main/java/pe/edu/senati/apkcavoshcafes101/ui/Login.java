@@ -12,11 +12,9 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import pe.edu.senati.apkcavoshcafes101.R;
 import pe.edu.senati.apkcavoshcafes101.databinding.FragmentLoginBinding;
-
 
 public class Login extends Fragment {
     FragmentLoginBinding binding;
@@ -31,8 +29,8 @@ public class Login extends Fragment {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
-        binding = FragmentLoginBinding.inflate(inflater,container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentLoginBinding.inflate(inflater,container,false);
         return view = binding.getRoot();
     }
 
@@ -42,13 +40,14 @@ public class Login extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-        binding.btnIngresar.setOnClickListener(v -> navController.navigate(R.id.navigation_olvidaste));
-        binding.tvRegistrar.setOnClickListener(v->navController.navigate(R.id.navigation_registrar));
-        binding.btnIngresar.setOnClickListener(v -> navController.navigate(R.id.navigation_registrar));
-        binding.btnLogin.setOnClickListener(v->btnLogin_Click());
+        binding.tvOlvidastes.setOnClickListener( v -> navController.navigate( R.id.navigation_olvidaste ) );
+        binding.tvRegistrar.setOnClickListener( v -> navController.navigate( R.id.navigation_registrar ) );
+        binding.btnRegistrar.setOnClickListener( v -> navController.navigate( R.id.navigation_registrar ) );
+        binding.btnLogin.setOnClickListener( v -> btnLogin_Click() );
     }
 
-    void  btnLogin_Click(){
+    private void btnLogin_Click() {
 
     }
+
 }

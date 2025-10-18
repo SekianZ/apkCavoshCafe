@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import pe.edu.senati.apkcavoshcafes101.R;
 import pe.edu.senati.apkcavoshcafes101.databinding.FragmentRegistrarBinding;
 
-
 public class Registrar extends Fragment {
     FragmentRegistrarBinding binding;
     Context context;
@@ -30,8 +29,8 @@ public class Registrar extends Fragment {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
-        binding = FragmentRegistrarBinding.inflate(inflater,container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentRegistrarBinding.inflate(inflater,container,false);
         return view = binding.getRoot();
     }
 
@@ -39,20 +38,21 @@ public class Registrar extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
-        navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController( view );
 
-        binding.btnGuardar.setOnClickListener(v->btnGuardar_Click());
+        binding.btnGuardar.setOnClickListener( v -> btnGuardar_Click() );
+        binding.btnLogin.setOnClickListener( v -> navController.navigate( R.id.navigation_login ) );
     }
 
-    private void btnGuardar_Click(){
+    private void btnGuardar_Click() {
         String sCorreo = binding.tilRegEmail.getEditText().getText().toString().trim();
 
-        //Api
+        // api -> guardar nombres, correo y password,  enviar correo con código validación
 
         Bundle bundle = new Bundle();
-        bundle.putString("validar","registrar");
+        bundle.putString("validar", "registrar");
         bundle.putString("correo", sCorreo);
-        navController.navigate(R.id.navigation_verificar, bundle);
-
+        navController.navigate( R.id.navigation_verificar, bundle );
     }
+
 }

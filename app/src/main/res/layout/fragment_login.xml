@@ -55,7 +55,7 @@
                 />
 
             <Button
-                android:id="@+id/btnSignup"
+                android:id="@+id/btnRegistrar"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -121,6 +121,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/tvOlvidastes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -146,6 +147,7 @@
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
+
 
         <FrameLayout
             android:layout_width="match_parent"

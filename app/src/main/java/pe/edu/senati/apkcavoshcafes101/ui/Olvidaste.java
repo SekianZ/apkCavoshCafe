@@ -30,28 +30,30 @@ public class Olvidaste extends Fragment {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
-        binding = FragmentOlvidasteBinding.inflate(inflater,container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentOlvidasteBinding.inflate(inflater,container,false);
         return view = binding.getRoot();
     }
 
     @Override
-    public  void onViewCreated(@NonNull View view, @Nullable Bundle savedInstance){
-        super.onViewCreated(view, savedInstance);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         context = getContext();
-        navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController( view );
 
-        binding.btnEnviar.setOnClickListener(v -> btnEnviar() );
+        binding.btnEnviar.setOnClickListener( v -> btnEnviar() );
     }
 
     private void btnEnviar() {
         String sCorreo = binding.tilCorreo.getEditText().getText().toString();
 
         // validación de correo
-        // api -> generar el codigo, guardar el codigo, enviar correo.
+        // api -> generar el código, guardar código, enviar correo
+
         Bundle bundle = new Bundle();
-        bundle.putString("validar","passwordd");
-        bundle.putString("correo", sCorreo);
-        navController.navigate(R.id.navigation_registrar, bundle);
+        bundle.putString( "validar", "passwordd" );
+        bundle.putString( "correo", sCorreo );
+        navController.navigate( R.id.navigation_verificar, bundle );
     }
+
 }
