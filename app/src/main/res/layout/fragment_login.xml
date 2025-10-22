@@ -6,22 +6,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Login">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/sh_bg_header_police_blue"
-        >
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:paddingHorizontal="16dp"
+            android:gravity="start|center"
             android:text="Let´s get you signed in!"
             android:textColor="@color/flesh"
             android:textSize="20sp"
+            android:background="@drawable/sh_bg_header_police_blue"
             android:textStyle="bold"
             />
-    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,7 +71,8 @@
             android:id="@+id/tilEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="36dp"
+            app:endIconMode="clear_text"
             app:hintEnabled="false"
             >
 
@@ -84,11 +80,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
                 android:background="@drawable/se_bg_edt_police_blue"
                 android:inputType="textEmailAddress"
                 android:maxLength="30"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp"
                 android:textColorHint="@color/steel_teal"
                 android:hint="@string/correo" />
 
@@ -111,10 +106,10 @@
                 android:background="@drawable/se_bg_edt_police_blue"
                 android:inputType="textPassword"
                 android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp"
+                android:paddingVertical="16dp"
+                android:maxLength="20"
                 android:textColorHint="@color/steel_teal"
                 android:hint="@string/passwordd"
-
                 />
 
 
@@ -123,11 +118,11 @@
         <TextView
             android:id="@+id/tvOlvidastes"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_height="48dp"
             android:layout_gravity="end"
             android:clickable="true"
             android:focusable="true"
+            android:gravity="center"
             android:text="@string/olvidar_contrasena"
             android:textColor="@color/carmine_pink"
             android:textStyle="bold"
@@ -145,7 +140,7 @@
             android:text="@string/ingresar"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
 
@@ -188,7 +183,7 @@
                 android:layout_height="70dp"
                 android:background="@drawable/sh_bg_btn_dust_storm"
                 android:contentDescription="@string/content_description"
-
+                app:tint="#074c8e"
                 android:padding="18dp"
                 android:src="@drawable/ic_facebook">
             </ImageView>
@@ -200,7 +195,7 @@
                 android:layout_marginStart="125dp"
                 android:background="@drawable/sh_bg_btn_dust_storm"
                 android:contentDescription="@string/content_description"
-
+                app:tint="#cd4c31"
                 android:padding="3dp"
                 android:src="@drawable/ic_google_plus">
             </ImageView>
@@ -221,26 +216,32 @@
         </FrameLayout>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't have an account?"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="30dp"
-        android:textColor="@color/police_blue"
-        android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/tvRegistrar"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register Now"
         android:layout_gravity="bottom|center"
-        android:layout_marginStart="68dp"
-        android:layout_marginBottom="30dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:textColor="@color/carmine_pink"
-        android:textStyle="bold"/>
+        android:layout_marginBottom="26dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="@color/police_blue"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvRegistrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Register now"
+            android:textColor="@color/carmine_pink"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
 </FrameLayout>

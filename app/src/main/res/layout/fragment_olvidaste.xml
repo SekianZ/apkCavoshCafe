@@ -7,34 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.Olvidaste">
 
-    <FrameLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@drawable/sh_bg_header_police_blue" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="20dp"
-            android:text="Recuperar contraseña"
-            android:textColor="@color/flesh"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_gravity="center"
-        android:orientation="vertical" >
+        android:background="@drawable/sh_bg_header_police_blue"
+        android:paddingHorizontal="16dp"
+        android:gravity="start|center"
+        android:text="Recuperar contraseña"
+        android:textColor="@color/flesh"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="-9dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_gravity="center"
             app:hintEnabled="false" >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -44,6 +34,7 @@
                 android:inputType="textEmailAddress"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="12dp"
+
                 android:textColorHint="@color/steel_teal"
                 android:hint="@string/correo" />
 
@@ -53,16 +44,15 @@
             android:id="@+id/btnEnviar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/sh_bg_btn_gunmetal"
             android:text="Enviar"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
-
-    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
