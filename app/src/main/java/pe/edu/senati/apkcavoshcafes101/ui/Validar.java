@@ -40,7 +40,7 @@ public class Validar extends Fragment {
         context = getContext();
         navController = Navigation.findNavController( view );
 
-        binding.btnValidar.setOnClickListener(v -> btnValidar_Click() );
+        binding.btnValidarCodigo.setOnClickListener(v -> btnValidar_Click() );
     }
 
     private void btnValidar_Click() {
